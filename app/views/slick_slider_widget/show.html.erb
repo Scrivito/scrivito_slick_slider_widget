@@ -1,0 +1,21 @@
+<div class="slider slick_slider_widget">
+  <% widget.panels.each do |p| %>
+    <div>
+      <% if p.link.present? %>
+        <%= link_to scrivito_path(p.link) do %>
+          <%= scrivito_image_tag p, :image %>
+          <p class="h4">Title of Link</p>
+        <% end %>
+      <% else %>
+        <%= scrivito_image_tag p, :image %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if scrivito_in_editable_view? %>
+    <div class="add_new_panel">
+      <p><a class="slick_slider_widget_add_new_panel scrivito_editing_link" href="#" widgetid="<%= widget.id %>">Add New<br />Slider Panel</a></p>
+    </div>
+  <% end %>
+
+</div>

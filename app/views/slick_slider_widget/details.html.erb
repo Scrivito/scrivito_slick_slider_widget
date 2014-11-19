@@ -1,0 +1,19 @@
+<% widget.panels.each_with_index do |panel, index| %>
+  <% unless index == 0 %>
+    <hr />
+  <% end %>
+  <div class="row">
+    <div class="col-md-4">
+      <%= scrivito_image_tag(panel, :image, style: "max-height: 100px; max-width: 250px; margin-bottom: 1em;") %>
+    </div>
+    <div class="col-md-8">
+      <%= scrivito_edit_link(panel, :link, data: {placeholder: "Where should the button take the user ..."}) %>
+    </div>
+  </div>
+<% end %>
+<hr />
+<!-- div class="add_new_panel">
+  <p>
+    <a id="slick_slider_widget_add_new_panel" href="#" widgetid="<%= widget.id %>" class="scrivito_editing_link">Add New Slider Panel</a>
+  </p>
+</div -->
