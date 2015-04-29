@@ -1,4 +1,5 @@
 class SlickSliderWidget < Widget
+  attribute :panels, :widgetlist
 
   def description_for_editor
     "Slick Slider"
