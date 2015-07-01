@@ -1,21 +1,24 @@
-<div class="slider slick_slider_widget">
-  <% widget.panels.each do |p| %>
-    <div>
-      <% if p.link.present? %>
-        <%= link_to scrivito_path(p.link) do %>
-          <%= scrivito_image_tag p, :image %>
-          <p class="h4"><%= p.link.title %></p>
+<% if widget.panels.present? %>
+  <div class="slider slick_slider_widget" data-slick="<%= widget.data_attributes %>">
+    <% widget.panels.each do |p| %>
+      <div>
+        <% if p.link.present? %>
+          <%= link_to scrivito_path(p.link) do %>
+            <div class="slider-image-wrapper">
+              <%= scrivito_image_tag p, :image %>
+            </div>
+            <p class="h4"><%= p.link.title %></p>
+          <% end %>
+        <% else %>
+          <div class="slider-image-wrapper">
+            <%= scrivito_image_tag p, :image %>
+          </div>
         <% end %>
-      <% else %>
-        <%= scrivito_image_tag p, :image %>
-      <% end %>
-    </div>
-  <% end %>
-
-  <% if scrivito_in_editable_view? %>
-    <div class="add_new_panel">
-      <p class="h4"><a class="slick_slider_widget_add_new_panel scrivito_editing_link" href="#" pageid="<%= @obj.id %>" widgetid="<%= widget.id %>">Add New<br />Slider Panel</a></p>
-    </div>
-  <% end %>
-
-</div>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <div class="alert alert-info">
+    There are no panels added to this slider. Go to details view to add some.
+  </div>
+<% end %>

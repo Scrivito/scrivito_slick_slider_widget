@@ -1,0 +1,1 @@
+//= require_tree ./scrivito_slick_slider_widget

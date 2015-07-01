@@ -1,19 +1,26 @@
-<% widget.panels.each_with_index do |panel, index| %>
-  <% unless index == 0 %>
-    <hr />
+<div class="details-view" data-scrivito-modal-size="large">
+  <%= scrivito_details_for do %>
+    <%= scrivito_tag :div, widget, :panels %>
   <% end %>
-  <div class="row">
-    <div class="col-md-4">
-      <%= scrivito_image_tag(panel, :image, style: "max-height: 100px; max-width: 250px; margin-bottom: 1em;") %>
-    </div>
-    <div class="col-md-8">
-      <%= scrivito_edit_link(panel, :link, data: {placeholder: "Where should the button take the user ..."}) %>
-    </div>
-  </div>
-<% end %>
-<hr />
-<!-- div class="add_new_panel">
-  <p>
-    <a id="slick_slider_widget_add_new_panel" href="#" widgetid="<%= widget.id %>" class="scrivito_editing_link">Add New Slider Panel</a>
-  </p>
-</div -->
+
+  <%= scrivito_details_for 'Slides' do %>
+    <strong>Show</strong>
+    <%= scrivito_tag(:div, widget, :slides_to_show) %>
+    <strong>Scroll</strong>
+    <%= scrivito_tag(:div, widget, :slides_to_scroll) %>
+  <% end %>
+
+  <%= scrivito_details_for 'Infinite Scrolling' do %>
+    <%= scrivito_toggle_button_editor(widget, :infinite) %>
+  <% end %>
+
+  <%= scrivito_details_for 'Show dots' do %>
+    <%= scrivito_toggle_button_editor(widget, :dots) %>
+  <% end %>
+
+  <%= scrivito_details_for 'Autoplay' do %>
+    <%= scrivito_toggle_button_editor(widget, :autoplay) %>
+    <strong>Speed</strong>
+    <%= scrivito_tag(:div, widget, :autoplay_speed) %>
+  <% end %>
+</div>

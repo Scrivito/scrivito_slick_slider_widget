@@ -1,3 +1,3 @@
 module ScrivitoSlickSliderWidget
-  VERSION = "0.0.60"
+  VERSION = "0.0.65"
 end

@@ -1,0 +1,19 @@
+<div class="scrivito-tab-title-details">
+  <%= scrivito_tag :div, widget, :alt_text %>
+  <%= link_to '(details)', '#', 'data-scrivito-tab-toggle-details' => widget.id %>
+  <div class="scrivito-tab-details-<%= widget.id %>">
+    <div>
+      <div class="row">
+        <div class="col-xs-4">
+          <strong>Background Image</strong>
+          <%= scrivito_image_tag(widget, :image) %>
+        </div>
+
+        <div class="col-xs-8">
+          <strong>Button</strong>
+          <%= scrivito_edit_link(widget, :link, data: {placeholder: "Where should the button take the user ..."}) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
