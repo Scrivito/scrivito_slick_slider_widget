@@ -2,26 +2,15 @@
 
 This Gem adds a Slick Slider to your Scrivito App. For details of the slider see http://kenwheeler.github.io/slick/
 
-
-## Prerequisites
-
-Use Bootstrap in your Rails app (or modify the views for your needs).
-
 ## Installation
 
 Add the gem to your Gemfile
 
     gem 'scrivito_slick_slider_widget'
 
-Run bundle:
-
-    $ bundle
-
-
 Add to your javascript/application.js:
 
     //= require slick_slider_widget
-
 
 Add to stylesheet/application.css:
 
