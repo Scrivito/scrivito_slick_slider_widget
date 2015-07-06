@@ -7,6 +7,9 @@ class SlickSliderWidget < Widget
   attribute :autoplay, :enum, values: ['Yes','No'], default: 'No'
   attribute :autoplay_speed, :string, default: '2000'
 
+  attribute :slides_to_show_tablet, :string, default: '2'
+  attribute :slides_to_show_mobile, :string, default: '1'
+
   def description_for_editor
     "Slick Slider"
   end
@@ -23,6 +26,20 @@ class SlickSliderWidget < Widget
       dots: (self.dots == 'Yes'),
       autoplay: (self.autoplay == 'Yes'),
       autoplaySpeed: self.autoplay_speed.to_i,
+      responsive: [{
+        breakpoint: 992,
+        settings: {
+          slidesToShow: self.slides_to_show_tablet.to_i,
+          slidesToScroll: self.slides_to_show_tablet.to_i
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: self.slides_to_show_mobile.to_i,
+          slidesToScroll: self.slides_to_show_mobile.to_i
+        }
+      }]
     }.to_json
   end
 
