@@ -1,4 +1,7 @@
 scrivito.on("content", function(){
-  var slider = $('.slick_slider_widget')
-  slider.slick(slider.data('slick'));
+  var sliders = $('.slick_slider_widget');
+  $.each(sliders, function(index, elem) {
+    var slider = $(elem);
+    slider.slick(slider.data('slick'));
+  });
 });
