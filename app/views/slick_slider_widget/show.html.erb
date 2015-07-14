@@ -5,13 +5,13 @@
         <% if p.link.present? %>
           <%= link_to scrivito_path(p.link) do %>
             <div class="slider-image-wrapper">
-              <%= scrivito_image_tag p, :image %>
+              <%= scrivito_image_tag p, :image, alt:p.alt_text %>
             </div>
             <p class="h4"><%= p.link.title %></p>
           <% end %>
         <% else %>
           <div class="slider-image-wrapper">
-            <%= scrivito_image_tag p, :image %>
+            <%= scrivito_image_tag p, :image, alt:p.alt_text %>
           </div>
         <% end %>
       </div>
