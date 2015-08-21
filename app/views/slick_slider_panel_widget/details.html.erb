@@ -1,19 +1,18 @@
-<div class="scrivito-title-details">
-  <%= scrivito_tag :h4, widget, :alt_text %>
-  <%= link_to '(details)', '#', 'data-scrivito-toggle-details' => widget.id %>
-  <div class="scrivito-details-<%= widget.id %>">
-    <div>
-      <div class="row">
-        <div class="col-xs-4">
-          <h5>Background Image</h5>
-          <%= scrivito_image_tag(widget, :image) %>
-        </div>
-
-        <div class="col-xs-8">
-          <h5>Button</h5>
-          <%= scrivito_edit_link(widget, :link, data: {placeholder: "Where should the button take the user ..."}) %>
-        </div>
-      </div>
+<%= scrivito_details_for do %>
+  <div class="row">
+    <div class="col-xs-4">
+      <%= scrivito_details_for 'Image' do %>
+        <%= scrivito_image_tag(widget, :image) %>
+      <% end %>
+    </div>
+    <div class="col-xs-8">
+      <%= scrivito_details_for 'Choose a destination' do %>
+        <%= scrivito_edit_link(widget, :link) %>
+      <% end %>
+      <%= scrivito_details_for 'Alt-Attribute' do %>
+        <p>(Make sure it has as much relevant information as possible)</p>
+        <%= scrivito_tag :div, widget, :alt_text %>
+      <% end %>
     </div>
   </div>
-</div>
+<% end %>

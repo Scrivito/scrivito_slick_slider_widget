@@ -1,31 +1,41 @@
 <div class="details-view" data-scrivito-modal-size="large">
-  <%= scrivito_details_for do %>
-    <%= scrivito_tag :div, widget, :panels %>
-  <% end %>
+  <ul class="tab-list">
+    <li class="active" data-panel-target="#edit-panels">
+      Panels
+    </li>
+    <li data-panel-target="#edit-settings">
+      Settings
+    </li>
+  </ul>
 
-  <%= scrivito_details_for 'Slides' do %>
-    <h5>Show on Desktop</h5>
-    <%= scrivito_tag(:div, widget, :slides_to_show) %>
-    <h5>Scroll</h5>
-    <%= scrivito_tag(:div, widget, :slides_to_scroll) %>
-
-    <h5>Show on Tablet</h5>
-    <%= scrivito_tag(:div, widget, :slides_to_show_tablet) %>
-    <h5>Show on Mobile</h5>
-    <%= scrivito_tag(:div, widget, :slides_to_show_mobile) %>
-  <% end %>
-
-  <%= scrivito_details_for 'Infinite Scrolling' do %>
-    <%= scrivito_toggle_button_editor(widget, :infinite) %>
-  <% end %>
-
-  <%= scrivito_details_for 'Show dots' do %>
-    <%= scrivito_toggle_button_editor(widget, :dots) %>
-  <% end %>
-
-  <%= scrivito_details_for 'Autoplay' do %>
-    <%= scrivito_toggle_button_editor(widget, :autoplay) %>
-    <h5>Speed</h5>
-    <%= scrivito_tag(:div, widget, :autoplay_speed) %>
-  <% end %>
+  <div class="tab-panels">
+    <div class="tab-panel active" id="edit-panels">
+      <%= scrivito_tag :div, widget, :panels %>
+    </div>
+    <div class="tab-panel" id="edit-settings">
+      <%= scrivito_details_for 'Show on Desktop' do %>
+        <%= scrivito_tag(:div, widget, :slides_to_show) %>
+      <% end %>
+      <%= scrivito_details_for 'Scroll' do %>
+        <%= scrivito_tag(:div, widget, :slides_to_scroll) %>
+      <% end %>
+      <%= scrivito_details_for 'Show on Tablet' do %>
+        <%= scrivito_tag(:div, widget, :slides_to_show_tablet) %>
+      <% end %>
+      <%= scrivito_details_for 'Show on Mobile' do %>
+        <%= scrivito_tag(:div, widget, :slides_to_show_mobile) %>
+      <% end %>
+      <%= scrivito_details_for 'Infinite Scrolling' do %>
+        <%= scrivito_toggle_button_editor(widget, :infinite) %>
+      <% end %>
+      <%= scrivito_details_for 'Show dots' do %>
+        <%= scrivito_toggle_button_editor(widget, :dots) %>
+      <% end %>
+      <%= scrivito_details_for 'Autoplay' do %>
+        <%= scrivito_toggle_button_editor(widget, :autoplay) %>
+        <h4>Speed</h4>
+        <%= scrivito_tag(:div, widget, :autoplay_speed) %>
+      <% end %>
+    </div>
+  </div>
 </div>
