@@ -10,7 +10,7 @@ Add the gem to your Gemfile
 
 Add to your javascript/application.js:
 
-    //= require slick_slider_widget
+    //= require scrivito_slick_slider_widget
 
 Add to stylesheet/application.css:
 
