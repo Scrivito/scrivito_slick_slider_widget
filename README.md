@@ -1,21 +1,21 @@
 # ScrivitoSlickSliderWidget
 
-This Gem adds a Slick Slider to your Scrivito App. For details of the slider see http://kenwheeler.github.io/slick/
+This gem adds a Slick Slider to your Scrivito app.
 
 ## Installation
 
-Add the gem to your Gemfile
+Add this line to your application's Gemfile:
 
     gem 'scrivito_slick_slider_widget'
 
-Add to your javascript/application.js:
+Add this line to your application JavaScript manifest:
 
     //= require scrivito_slick_slider_widget
 
-Add to stylesheet/application.css:
+Add this line to your application Stylesheet manifest:
 
     *= require scrivito_slick_slider_widget
 
 ## Customization
 
-We recomment to use [Scrivito Advanced Editors](https://github.com/Scrivito/scrivito_advanced_editors) for best usability.
+We recommend to use [Scrivito Advanced Editors](https://github.com/Scrivito/scrivito_advanced_editors) which provides nicer controls.
