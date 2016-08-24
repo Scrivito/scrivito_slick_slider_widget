@@ -19,3 +19,27 @@ Add this line to your application Stylesheet manifest:
 ## Customization
 
 We recommend to use [Scrivito Advanced Editors](https://github.com/Scrivito/scrivito_advanced_editors) which provides nicer controls.
+
+## Localization
+
+The following code represents the default localization for English. Copy it to your `en.yml` and change it if necessary:
+
+```yaml
+en:
+  scrivito_slick_slider_widget:
+    thumbnail:
+      title: Slick Slider
+      description: Highly adaptive slider
+    details:
+      image: Image
+      link: Destination
+      alt_text: Alternative Text
+      infinite: Activate infinite Scrolling
+      slides_to_show: Number of elements visible
+      slides_to_scroll: Number of elements that scroll
+      dots: Show inditactor
+      autoplay: Autoplay
+      autoplay_speed: Speed for Autoplay in ms
+      slides_to_show_tablet: Number of elements visible on tablet
+      slides_to_show_mobile: Number of elements visible on mobile
+```

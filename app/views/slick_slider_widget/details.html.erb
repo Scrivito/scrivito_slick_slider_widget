@@ -1,41 +1,39 @@
-<div class="details-view" data-scrivito-modal-size="large">
-  <ul class="tab-list">
-    <li data-panel-target="#edit-panels" class="active">
-      Panels
-    </li>
-    <li data-panel-target="#edit-settings">
-      Settings
-    </li>
-  </ul>
-
-  <div class="tab-panels">
-    <div class="tab-panel" id="edit-panels">
-      <%= scrivito_tag :div, widget, :panels %>
-    </div>
-    <div class="tab-panel" id="edit-settings">
-      <%= scrivito_details_for 'Visible slider on Desktop' do %>
+<%= scrivito_large_dialog do %>
+  <%= scrivito_tag :div, widget, :panels %>
+  <hr>
+  <%= scrivito_details_for 'Number of elements visible on' do %>
+    <div class="row">
+      <div class="col-md-4">
+        <h4><%= t('scrivito_slick_slider_widget.details.slides_to_show', default: 'Desktop') %></h4>
         <%= scrivito_tag(:div, widget, :slides_to_show) %>
-      <% end %>
-      <%= scrivito_details_for 'Slider scroll' do %>
-        <%= scrivito_tag(:div, widget, :slides_to_scroll) %>
-      <% end %>
-      <%= scrivito_details_for 'Visible slider on Tablet' do %>
+      </div>
+
+      <div class="col-md-4">
+        <h4><%= t('scrivito_slick_slider_widget.details.slides_to_show_tablet', default: 'Tablet') %></h4>
         <%= scrivito_tag(:div, widget, :slides_to_show_tablet) %>
-      <% end %>
-      <%= scrivito_details_for 'Visible slider on Mobile' do %>
+      </div>
+
+      <div class="col-md-4">
+        <h4><%= t('scrivito_slick_slider_widget.details.slides_to_show_mobile', default: 'Mobile') %></h4>
         <%= scrivito_tag(:div, widget, :slides_to_show_mobile) %>
-      <% end %>
-      <%= scrivito_details_for 'Activate infinite Scrolling' do %>
-        <%= scrivito_tag(:div, widget, :infinite) %>
-      <% end %>
-      <%= scrivito_details_for 'Show indicators' do %>
-        <%= scrivito_tag(:div, widget, :dots) %>
-      <% end %>
-      <%= scrivito_details_for 'Autoplay' do %>
-        <%= scrivito_tag(:div, widget, :autoplay) %>
-        <h4>Speed for autoplay</h4>
-        <%= scrivito_tag(:div, widget, :autoplay_speed) %>
-      <% end %>
+      </div>
     </div>
-  </div>
-</div>
+  <% end %>
+
+  <%= scrivito_details_for do %>
+    <h4><%= t('scrivito_slick_slider_widget.details.slides_to_scroll', default: 'Number of elements that scroll') %></h4>
+    <%= scrivito_tag(:div, widget, :slides_to_scroll) %>
+
+    <h4><%= t('scrivito_slick_slider_widget.details.infinite', default: 'Activate infinite Scrolling') %></h4>
+    <%= scrivito_tag(:div, widget, :infinite) %>
+
+    <h4><%= t('scrivito_slick_slider_widget.details.dots', default: 'Show inditactor') %></h4>
+    <%= scrivito_tag(:div, widget, :dots) %>
+
+    <h4><%= t('scrivito_slick_slider_widget.details.autoplay', default: 'Autoplay') %></h4>
+    <%= scrivito_tag(:div, widget, :autoplay) %>
+
+    <h4><%= t('scrivito_slick_slider_widget.details.autoplay_speed', default: 'Speed for autoplay') %></h4>
+    <%= scrivito_tag(:div, widget, :autoplay_speed) %>
+  <% end %>
+<% end %>

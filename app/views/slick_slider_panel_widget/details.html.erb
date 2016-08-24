@@ -1,16 +1,15 @@
 <%= scrivito_details_for do %>
   <div class="row">
     <div class="col-xs-4">
-      <%= scrivito_details_for 'Image' do %>
+      <%= scrivito_details_for t('scrivito_slick_slider_widget.details.image', default: 'Image') do %>
         <%= scrivito_image_tag(widget, :image) %>
       <% end %>
     </div>
     <div class="col-xs-8">
-      <%= scrivito_details_for 'Choose a destination' do %>
+      <%= scrivito_details_for t('scrivito_slick_slider_widget.details.link', default: 'Destination') do %>
         <%= scrivito_tag(:div, widget, :link) %>
       <% end %>
-      <%= scrivito_details_for 'Alt-Attribute' do %>
-        <p>(Make sure it has as much relevant information as possible)</p>
+      <%= scrivito_details_for t('scrivito_slick_slider_widget.details.alt_text', default: 'Alternative Text') do %>
         <%= scrivito_tag :div, widget, :alt_text %>
       <% end %>
     </div>
