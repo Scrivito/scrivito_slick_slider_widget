@@ -8,7 +8,7 @@
 
 .slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }
 .slick-list:focus { outline: none; }
-.slick-loading .slick-list { background: white image_url('ajax-loader.gif') center center no-repeat; }
+.slick-loading .slick-list { background: white asset_url('ajax-loader.gif') center center no-repeat; }
 .slick-list.dragging { cursor: pointer; cursor: hand; }
 
 .slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img {
