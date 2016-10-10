@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = "Scrivito Widget for a bootstrap-style Slick Slider."
   s.license     = "LGPL-3.0"
 
-  s.files = Dir["{app,config,lib,scrivito}/**/*", "LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["{app,config,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "scrivito", ">= 0.42.0"
 end
