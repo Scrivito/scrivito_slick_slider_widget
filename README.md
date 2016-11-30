@@ -34,12 +34,12 @@ en:
       image: Image
       link: Destination
       alt_text: Alternative Text
-      infinite: Activate infinite Scrolling
+      infinite: Activate infinite scrolling
       slides_to_show: Number of elements visible
       slides_to_scroll: Number of elements that scroll
-      dots: Show inditactor
+      dots: Show dots
       autoplay: Autoplay
-      autoplay_speed: Speed for Autoplay in ms
+      autoplay_speed: Speed for autoplay in ms
       slides_to_show_tablet: Number of elements visible on tablet
       slides_to_show_mobile: Number of elements visible on mobile
 ```
