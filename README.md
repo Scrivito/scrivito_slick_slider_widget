@@ -16,6 +16,10 @@ Add this line to your application Stylesheet manifest:
 
     *= require scrivito_slick_slider_widget
 
+If you use `sass-rails` for your application stylesheet manifest (e.g. `application.scss` or `application.css.scss`) add the following:
+
+    @import "scrivito_slick_slider_widget/application";
+
 ## Customization
 
 We recommend to use [Scrivito Advanced Editors](https://github.com/Scrivito/scrivito_advanced_editors) which provides nicer controls.
